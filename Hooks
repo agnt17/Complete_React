@@ -1,6 +1,28 @@
 Hooks in react: Simple functions that ease our work. These are always started with use keyword.
 
-UseState hook: It is used to manage the state of the components and helps in rendering the changes in the UI.
+useState Hook: It is used to manage the state of the components and helps in rendering the changes in the UI.
+
 ex: const[count, setCount] = useState('');
 
-Here cou
+Here count is a variable and setCount is a function. This setCount is responsible for setting the values and then rendering them.
+
+useCallback Hook: The useCallback hook is used to memoize the functions and thus performance is increased by preventing unnecessary re-creations of functions, especially when passing callbacks 
+to the functions.
+
+ex: const fun_name = useCallback(() => {}, []);
+
+() => {}.... This is the callback function and what we write here is memoized that is only performanced rendered.
+[].... This is the dependency array and in this array we write what things will recreate. If empty dependency array then function will never be recreated
+
+useEffect hook: The useEffect hook is used to perform side effects in function components. Side effects can include data fetching, subscriptions, or manually changing the DOM.
+This hook is just opposite to the useCallback hook and this hook runs after every render by default, to control it you must do modifications in the dependency array.
+If you pass an empty array as dependency array, useEffect will only run once.
+
+You can also return cleanup function to perform cleaups like unsubscribing and clearing timers.
+
+ex: useEffect(() => {
+  //some function defintion
+  return () => {
+    //Cleanup function
+  }
+}, [])
