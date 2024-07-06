@@ -1,8 +1,8 @@
 Hooks in react: Simple functions that ease our work. These are always started with use keyword.
 
-useState Hook: It is used to manage the state of the components and helps in rendering the changes in the UI.
+useState Hook: It is used to manage the state of the components and helps in rendering the changes in the UI. Jb tk tum ise use nhi kroge tb tk UI me kuch nhi change hone wala.
 
-ex: const[count, setCount] = useState('');
+ex: const[count, setCount] = useState('Initial_value');
 
 Here count is a variable and setCount is a function. This setCount is responsible for setting the values and then rendering them.
 
@@ -26,3 +26,10 @@ ex: useEffect(() => {
     //Cleanup function
   }
 }, [])
+
+useRef hook: useRef is a React Hook that lets you reference a value that’s not needed for rendering. 
+useRef is like a little box that you can use in your React components to hold a value or a reference to something. It is unlike useState which re renders every time but it holds the value.
+This box doesn't get emptied or reset every time your component updates (re-renders).
+
+ex: const inputRef = useRef(0);
+In short, useRef helps you keep track of things (like DOM elements or values) in your React components without constantly re-rendering them.
