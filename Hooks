@@ -1,0 +1,6 @@
+Hooks in react: Simple functions that ease our work. These are always started with use keyword.
+
+UseState hook: It is used to manage the state of the components and helps in rendering the changes in the UI.
+ex: const[count, setCount] = useState('');
+
+Here cou
